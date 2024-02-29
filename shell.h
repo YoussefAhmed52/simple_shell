@@ -74,7 +74,7 @@ typedef struct liststring
  *@environ: custom modified copy of environment from LL env
  *@history: the history node
  *@alias: the alias node
- *@environment_changed: on if environment was changed
+ *@env_changed: on if environment was changed
  *@status: the return status of the last exec'd command
  *@cmd_buf: address of pointer to cmd_buffer, on if chaining
  *@cmd_buf_type: CMD_type ||, &&, ;
@@ -95,7 +95,7 @@ typedef struct passinfo
 	list_t *history;
 	list_t *alias;
 	char **environ;
-	int environment_changed;
+	int env_changed;
 	int status;
 
 	char **cmd_buf; /* pointer to cmd ; chain buffer, for memory mangement */
