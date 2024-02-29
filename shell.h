@@ -43,7 +43,7 @@
 #define HIST_FILE	".simple_shell_history"
 
 
-extern char **environment;
+extern char **environ;
 
 
 /**
@@ -71,7 +71,7 @@ typedef struct liststring
  *@linecount_flag: if on count this line of input
  *@fname: the program filename
  *@env: linked list local copy of environment
- *@environment: custom modified copy of environment from LL env
+ *@environ: custom modified copy of environment from LL env
  *@history: the history node
  *@alias: the alias node
  *@environment_changed: on if environment was changed
@@ -94,7 +94,7 @@ typedef struct passinfo
 	list_t *env;
 	list_t *history;
 	list_t *alias;
-	char **environment;
+	char **environ;
 	int environment_changed;
 	int status;
 
